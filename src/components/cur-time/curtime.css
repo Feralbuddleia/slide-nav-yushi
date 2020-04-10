@@ -1,0 +1,20 @@
+h2 {
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 40px;
+    margin: 0;
+  }
+
+.timer {
+    width: 60%;
+    margin: 20px auto;
+    color: #DBDBDB;
+    opacity: 0.3;
+}
+
+.clicked {
+    color: black;
+    border: 2px dotted black;
+    opacity: 1;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+}
