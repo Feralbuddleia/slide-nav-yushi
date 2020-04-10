@@ -1,5 +1,5 @@
 A navbar contains different cities around the world. The navigation bar have a sliding bar that indicates a selected
-item, and that bar can resize itself to match the width of the selected item text. It also display the current time of the selected city. 
+item, and that bar can resize itself to match the width of the selected item text. It also displays the current time of the selected city. 
 
 ## Available Scripts
 
