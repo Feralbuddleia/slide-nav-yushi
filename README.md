@@ -1,4 +1,5 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A navbar contains different cities around the world. The navigation bar have a sliding bar that indicates a selected
+item, and that bar can resize itself to match the width of the selected item text. It also displays the current time of the selected city. 
 
 ## Available Scripts
 
