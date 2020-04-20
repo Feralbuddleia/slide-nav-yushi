@@ -5,11 +5,9 @@ const Nav = (props) => {
     const { city, curCity, buttonClick } = props;
     const active = curCity === city ? 'active' : '';
     return (
-        <a 
-            href="# "
-            className={`nav ${active}`}
-            onClick={() => buttonClick(city)}
-        >{city}</a>
+        <li className={`Tabs__tab ${active} Tab`} onClick={() => buttonClick(city)}>
+            <a href='# '>{city}</a>
+        </li>
     )
 }
 

@@ -1,34 +1,22 @@
-.nav {
-    display:inline-block;
-    /* width: calc(100% / 7); */
-    border: none;
-    font-family: system-ui;
-    font-size: 1.5vw;
-    color: #A8A8A8;
-    box-sizing: border-box;
-    margin-bottom: 0;
+.Tab {
+  font-family: system-ui;
+  font-size: 1.2vw;
+}
+.Tab > a {
+      display: block;
+      padding: 10px 12px;
+      text-decoration: none;
+      color: #A8A8A8;
+      transition: color .15s;
   }
 
-a {
-    padding: 1% 2%;
-    margin: 0 1%;
-    text-decoration: none;
+.Tab.active > a {  
+      color: #222;     
 }
-
-/* remove chrome default blue border */
-button:focus {
-  outline:0;
+.Tab:hover > a {
+      cursor: pointer;
+      color: skyblue;    
 }
-
-button:hover {
-  cursor: pointer;
-  color: skyblue;
   
-}
-
-.active {
-  color: black;
-  border-bottom: 1px solid black !important;
-}
 
   

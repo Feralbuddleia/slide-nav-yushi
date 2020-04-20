@@ -12,30 +12,30 @@ class App extends Component {
       navigation: data.cities,
       curCity: '',
       timezonelist: [
-        {name: "Cupertino", timezone: "America/Los_Angeles"},
-        {name: "New York City", "timezone": "America/New_York"},
-        {name: "London", timezone: "Europe/London"},
-        {name: "Amsterdam", timezone: "Europe/Amsterdam"},
-        {name: "Tokyo", timezone: "Japan"},
-        {name: "Hong Kong", timezone: "Hongkong"},
-        {name: "Sydney", timezone: "Australia/Sydney"}
-    ]
+        { name: "Cupertino", timezone: "America/Los_Angeles" },
+        { name: "New York City", "timezone": "America/New_York" },
+        { name: "London", timezone: "Europe/London" },
+        { name: "Amsterdam", timezone: "Europe/Amsterdam" },
+        { name: "Tokyo", timezone: "Japan" },
+        { name: "Hong Kong", timezone: "Hongkong" },
+        { name: "Sydney", timezone: "Australia/Sydney" }
+      ]
     };
   }
 
   buttonClick = text => {
-    const {timezonelist} = this.state;
-    this.setState({ 
+    const { timezonelist } = this.state;
+    this.setState({
       curCity: text,
-      timezonelist: timezonelist.filter(tz=>tz.name===text).concat(timezonelist.filter(tz=>tz.name!==text))
-     })
+      timezonelist: timezonelist.filter(tz => tz.name === text).concat(timezonelist.filter(tz => tz.name !== text))
+    })
   }
 
   render() {
     const { navigation, curCity, timezonelist } = this.state;
     return (
       <div className="App">
-        <div className="nav-container">
+        <ul className="Tabs">
           {navigation.map(city => (
             <Nav
               key={city.section}
@@ -44,12 +44,14 @@ class App extends Component {
               buttonClick={this.buttonClick}
             />
           ))}
-        </div>
+          <li className='Tabs__presentation-slider' role='presentation'/>
+
+        </ul>
         <div className="time-container">
           {timezonelist.map(cty => (
-            <CurTime 
-              key={cty.name} 
-              city={cty.name} 
+            <CurTime
+              key={cty.name}
+              city={cty.name}
               timezone={cty.timezone}
               curCity={curCity}
             />
